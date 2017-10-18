@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FOUT with a Class</title>
+	<style>
+	@font-face {
+		font-family: Lato;
+		src: url('font-lato/lato-regular-webfont.woff2') format('woff2'),
+				 url('font-lato/lato-regular-webfont.woff') format('woff');
+	}
+	@font-face {
+		font-family: Lato;
+		src: url('font-lato/lato-bold-webfont.woff2') format('woff2'),
+				 url('font-lato/lato-bold-webfont.woff') format('woff');
+		font-weight: 700;
+	}
+
+	@font-face {
+		font-family: Lato;
+		src: url('font-lato/lato-italic-webfont.woff2') format('woff2'),
+				 url('font-lato/lato-italic-webfont.woff') format('woff');
+		font-style: italic;
+	}
+
+	@font-face {
+		font-family: Lato;
+		src: url('font-lato/lato-bolditalic-webfont.woff2') format('woff2'),
+				 url('font-lato/lato-bolditalic-webfont.woff') format('woff');
+		font-weight: 700;
+		font-style: italic;
+	}
+
+	body {
+		font-family: sans-serif;
+	}
+	.fonts-loaded body {
+		font-family: Lato, sans-serif;
+	}
+	
+	</style>
+	<script>
+	(function() {
+
+		// Optimization for Repeat Views
+		if( sessionStorage.fontsLoadedFoutWithClass ) {
+			document.documentElement.className += " fonts-loaded";
+			return;
+		}
+
+		if( "fonts" in document ) {
+			Promise.all([
+				document.fonts.load("1em Lato"),
+				document.fonts.load("700 1em Lato"),
+				document.fonts.load("italic 1em Lato"),
+				document.fonts.load("italic 700 1em Lato")
+			]).then(function () {
+				document.documentElement.className += " fonts-loaded";
+
+				// Optimization for Repeat Views
+				sessionStorage.fontsLoadedFoutWithClass = true;
+			});
+		}
+	})();
+	</script>
+</head>
+<body>
+	<h1>FOUT with a Class</h1>
+	<p>This is a paragraph. <strong>This is heavier text.</strong> <em>This is emphasized text.</em> <strong><em>This is heavier and emphasized text.</em></strong></p>
+</body>
+</html>

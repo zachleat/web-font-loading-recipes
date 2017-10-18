@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Uncermonious faux-@font-face</title>
+	<style>
+	@font-face {
+		font-family: Lato;
+		src: url('font-lato/lato-regular-webfont.woff2') format('woff2'),
+				 url('font-lato/lato-regular-webfont.woff') format('woff');
+	}
+	body {
+		font-family: Lato, sans-serif;
+	}
+	</style>
+</head>
+<body>
+	<h1>Unceremonious faux @font-face (font-synthesis)</h1>
+	<p>This is a paragraph. <strong>This is heavier text (font-synthesis).</strong> <em>This is emphasized text (font-synthesis).</em> <strong><em>This is heavier and emphasized text (font-synthesis).</em></strong></p>
+</body>
+</html>
