@@ -12,9 +12,7 @@ As web fonts are a progressive enhancement and with increasing support for the C
 * [FOUT with a Class](./fout-with-class.html), or [using a polyfill](./fout-with-class-polyfill.html) (4 web fonts)
 * [FOFT, or FOUT with Two Stage Render](./foft.html), or [using a polyfill](./foft-polyfill.html) (4 web fonts)
 
-## Paired Approaches (Advanced font loading)
-
-Combining one or more font loading methods for improved results.
+## Combining font loading methods
 
 * [FOFT using only `font-display`](./font-display-mix.html) (4 web fonts, 1 `swap` / 3 `optional`)
 * Critical FOFT
@@ -29,8 +27,8 @@ Combining one or more font loading methods for improved results.
 
 ## Deprecated Methods
 
-* Inline Data URI
-* Asynchronous Data URI
+* [Inline Data URI](./inline-data-uri.html) (4 web fonts)
+* [Asynchronous Data URI](./async-data-uri.html) (4 web fonts)
 
 ## Failed Experiments
 
