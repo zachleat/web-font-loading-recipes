@@ -16,6 +16,7 @@ As web fonts are a progressive enhancement and with increasing support for the C
 
 Combining one or more font loading methods for improved results.
 
+* [FOFT using only `font-display`](./font-display-mix.html) (4 web fonts, 1 `swap` / 3 `optional`)
 * Critical FOFT
 * Critical FOFT with Data URI
 * Critical FOFT with `preload`
