@@ -10,7 +10,7 @@ As web fonts are a progressive enhancement and with increasing support for the C
 
 * [`font-display`](./font-display.html)
   * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#font-display)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/font-display.html)** _(4 web fonts)_: FOUT using a single CSS descriptor.
+  * [Demo](https://www.zachleat.com/web-fonts/demos/font-display.html)** _(4 web fonts)_
 * [`preload`](./preload.html)
   * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#preload)
   * [Demo](https://www.zachleat.com/web-fonts/demos/preload.html)** _(4 web fonts—1 preloaded)_
