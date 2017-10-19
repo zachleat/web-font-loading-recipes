@@ -48,7 +48,7 @@ You’ll probably see blog posts on these at some point.
   * Notable in that it lazy loads the font loading polyfill only if the CSS Font Loading API is not supported
 * (To be named) Any recommended non-polyfilled recipe above with one slight variation: it uses the eBay method if the CSS Font Loading API is not supported (in practice this means `font-display: optional` only on IE/Edge). This is what I’m currently doing on [zachleat.com](https://www.zachleat.com/web/).
 * FOUT without a class
-  * Doesn’t require any modification of the CSS, injects the web fonts using JS programmatically (the Asynchronous Data URI method below also does this).
+  * Doesn’t require any modification of the CSS, injects the web fonts using JS programmatically (the Asynchronous Data URI method below also does this). Documented in the [Webfont Handbook from @bramstein](https://abookapart.com/products/webfont-handbook).
 
 ## Not Recommended but included for Posterity
 
