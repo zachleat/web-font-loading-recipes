@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Experimental: @supports font-display</title>
+	<title>Failed experiment: @supports and font-display</title>
 	<style>
 	/* This doesn’t work but I wish it did */
 	@supports (font-display: swap) {
@@ -13,21 +13,19 @@
 			font-display: swap;
 		}
 		@font-face {
-			font-family: LatoBold;
+			font-family: Lato;
 			src: url('font-lato/lato-bold-webfont.woff2') format('woff2');
 			font-weight: 700;
 			font-display: swap;
 		}
-
 		@font-face {
-			font-family: LatoItalic;
+			font-family: Lato;
 			src: url('font-lato/lato-italic-webfont.woff2') format('woff2');
 			font-style: italic;
 			font-display: swap;
 		}
-
 		@font-face {
-			font-family: LatoBoldItalic;
+			font-family: Lato;
 			src: url('font-lato/lato-bolditalic-webfont.woff2') format('woff2');
 			font-weight: 700;
 			font-style: italic;
@@ -38,26 +36,10 @@
 	body {
 		font-family: Lato, sans-serif;
 	}
-	h1,
-	strong {
-		font-family: LatoBold, sans-serif;
-		font-weight: 700;
-	}
-	em {
-		font-family: LatoItalic, sans-serif;
-		font-style: italic;
-	}
-	strong em,
-	em strong {
-		font-family: LatoBoldItalic, sans-serif;
-		font-weight: 700;
-		font-style: italic;
-	}
 	</style>
 </head>
 <body>
-	<h1>This doesn’t work but I wish it did</h1>
-	<h1>Experimental: @supports font-display</h1>
+	<h1>Failed experiment: @supports and font-display</h1>
 	<p>This is a paragraph. <strong>This is heavier text.</strong> <em>This is emphasized text.</em> <strong><em>This is heavier and emphasized text.</em></strong></p>
 
 	<hr style="margin-top: 2em">

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<style>
+			body {
+				font-family: sans-serif;
+			}
+			p {
+				margin: 0;
+			}
+			div {
+				position: relative;
+				min-height: 3em;
+				font-size: 3em;
+			}
+			div p:first-child {
+				color: red;
+				font-family: system-ui, -apple-system, '.SFNSText-Regular', monospace; /*sans-serif;*/
+				font-style: italic;
+				font-variation-settings: 'wght' .5, 'wdth' 1, 'ital' 1, 'slnt' 1, 'opsz' 1;
+			}
+			div p:first-child + p {
+				color: green;
+				font-family: sans-serif;
+				font-style: italic;
+			}
+			.overlay p {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 0;
+				opacity: .7;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Variable Font FOUT Test</h1>
+		<h2>sans-serif</h2>
+		<div>
+			<p></p>
+			<p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+		</div>
+		<h2>system-ui, -apple-system, `.SFNSText-Regular` (San Francisco on Mac)</h2>
+		<div>
+			<p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+		</div>
+		<h2>FOUT Overlay</h2>
+		<div class="overlay">
+			<p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+			<p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p>
+		</div>
+	</body>
+</html>
