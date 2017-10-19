@@ -9,28 +9,37 @@ Demos are hosted at https://www.zachleat.com/web-fonts/demos/
 As web fonts are a progressive enhancement and with increasing support for the CSS Font Loading API, we can look forward to a time in which we won’t need to inline a polyfill into the header (for even faster font loading). The simplified CSS Font Loading API recipes are the defaults, but polyfilled versions are included above for broader browser support. In practice this means only the polyfilled versions will show web fonts in Internet Explorer and Edge web browsers (which do not have support for the CSS Font Loading API).
 
 * [`font-display`](./font-display.html)
+  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#font-display)
   * [Demo](https://www.zachleat.com/web-fonts/demos/font-display.html)** _(4 web fonts)_: FOUT using a single CSS descriptor.
 * [`preload`](./preload.html)
+  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#preload)
   * [Demo](https://www.zachleat.com/web-fonts/demos/preload.html)** _(4 web fonts—1 preloaded)_
 * [FOUT with a Class](./fout-with-class.html)
+  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#fout-class)
   * [Demo](https://www.zachleat.com/web-fonts/demos/fout-with-class.html) _(4 web fonts)_
   * or [using a polyfill](./fout-with-class-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/fout-with-class-polyfill.html) _(4 web fonts)_
 * [FOFT](./foft.html)
+  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#foft)
   * [Demo](https://www.zachleat.com/web-fonts/demos/foft.html) _(5 web fonts, two are the same—but only loaded once)_
   * or [using a polyfill](./foft-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/foft-polyfill.html) _(4 web fonts)_
 * [FOFT using only `font-display`](./font-display-mix.html)
   * [Demo](https://www.zachleat.com/web-fonts/demos/font-display-mix.html) _(4 web fonts—1 `swap` / 3 `optional`)_
 * [Critical FOFT](./critical-foft.html)
+  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft)
   * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft.html) _(5 web fonts—1 subset)_
   * or [using a polyfill](./critical-foft-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-polyfill.html) _(4 web fonts)_
 * [Critical FOFT with Data URI](critical-foft-data-uri.html)
+  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-data-uri)
   * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-data-uri.html) _(5 web fonts—1 subset inline Data URI)_
   * or [using a polyfill](./critical-foft-data-uri-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-data-uri-polyfill.html) _(5 web fonts—1 subset inline Data URI)_
 * [Critical FOFT with `preload`](./critical-foft-preload.html)
+  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-preload)
   * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload.html) _(5 web fonts—1 subset)_
   * or [using a polyfill](./critical-foft-preload-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload-polyfill.html) _(5 web fonts—1 subset)_
 
 ## Experiments in Progress
+
+You’ll probably see blog posts on these at some point.
 
 * [FOUT metric matching with a Variable Font](./variablefont-fout-test.html)
   * Reduction in FOUT reflow (reduce text movement on web font render)
@@ -44,11 +53,13 @@ As web fonts are a progressive enhancement and with increasing support for the C
 ## Not Recommended but included for Posterity
 
 * [System fonts](./dont.html)
+  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#abstain)
   * [Demo](https://www.zachleat.com/web-fonts/demos/dont.html) _(0 web fonts)_
 * [Unceremonious Web Fonts](./unceremonious-font-face.html)
+  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#font-face)
   * [Demo](https://www.zachleat.com/web-fonts/demos/unceremonious-font-face.html)** _(4 web fonts)_
 * [Unceremonious Faux Web Fonts](./unceremonious-faux-font-face.html)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/unceremonious-faux-font-face.html) _(1 web font)_: Bold and italic variants are rendered using [font-synthesis](https://www.zachleat.com/web/webfont-glossary/#font-synthesis)
+  * [Demo](https://www.zachleat.com/web-fonts/demos/unceremonious-faux-font-face.html)** _(1 web font)_: Bold and italic variants are rendered using [font-synthesis](https://www.zachleat.com/web/webfont-glossary/#font-synthesis)
 * [Unceremonious Web Fonts, WOFF2 Only (Cutting the Mustard)](./unceremonious-font-face-woff2-only.html)
   * Old browsers [used to render FOIT without a timeout](https://www.zachleat.com/web/fout-foit-history/), which in practice made web fonts a single point of failure. Using WOFF2 only cuts the mustard to modern browsers that have a three second FOIT timeout for web fonts. Three seconds is still way too long for me to implement this in production, but it’s worth noting.
   * [Demo](https://www.zachleat.com/web-fonts/demos/unceremonious-font-face-woff2-only.html)** _(4 web fonts)_
@@ -56,8 +67,10 @@ As web fonts are a progressive enhancement and with increasing support for the C
 ### Deprecated Methods
 
 * [Inline Data URI](./inline-data-uri.html)
+  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#inline-data-uri)
   * [Demo](https://www.zachleat.com/web-fonts/demos/inline-data-uri.html) _(4 web fonts)_
 * [Asynchronous Data URI](./async-data-uri.html)
+  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#async-data-uri)
   * [Demo](https://www.zachleat.com/web-fonts/demos/async-data-uri.html) _(4 web fonts)_
 * Anything that injects a new `<style>` with `@font-face` blocks inside. Really bad repaint cost—seriously, don’t do this.
 
