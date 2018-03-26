@@ -6,7 +6,7 @@ Demos are hosted at https://www.zachleat.com/web-fonts/demos/
 
 ## Recommended Methods
 
-As web fonts are a progressive enhancement and with increasing support for the CSS Font Loading API, we can look forward to a time in which we won’t need to inline a polyfill into the header (for even faster font loading). The simplified CSS Font Loading API recipes are the defaults, but polyfilled versions are included for broader browser support. In practice this means only the polyfilled versions will show web fonts in Internet Explorer and Edge web browsers (which do not have support for the CSS Font Loading API).
+As web fonts are a progressive enhancement and with increasing support for the CSS Font Loading API, we can look forward to a time in which we won’t need to inline a polyfill into the header (for even faster font loading). The simplified CSS Font Loading API recipes are the defaults, but polyfilled versions are included for broader browser support—notably only the polyfilled versions will show web fonts in Internet Explorer and Edge web browsers (which do not have support for the CSS Font Loading API).
 
 * [`font-display`](./font-display.html)
   * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#font-display)
@@ -36,6 +36,12 @@ As web fonts are a progressive enhancement and with increasing support for the C
   * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-preload)
   * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload.html) _(5 web fonts—1 subset)_
   * or [using a polyfill](./critical-foft-preload-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload-polyfill.html) _(5 web fonts—1 subset)_
+* [“The Compromise”: Critical FOFT with `preload`, with a polyfill fallback emulating `font-display: optional`](./critical-foft-preload-fallback-optional.html)
+  * _TODO_ Documentation
+    * Builds on the eBay method described in the experiments below.
+  * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload-fallback-optional.html) _(5 web fonts—1 subset)_ (polyfill is lazy loaded when CSS Font Loading API is not supported)
+  * Currently in use on [zachleat.com](https://www.zachleat.com/web/) and [smashingmagazine.com](https://www.smashingmagazine.com/)
+
 
 ## Experiments in Progress
 
@@ -46,7 +52,6 @@ You’ll probably see blog posts on these at some point.
   * Related: [Font style matcher](https://meowni.ca/font-style-matcher/) from @notwaldorf
 * Emulate `font-display: optional` with JS (the [eBay method](http://www.ebaytechblog.com/2017/09/21/ebays-font-loading-strategy/))
   * Notable in that it lazy loads the font loading polyfill only if the CSS Font Loading API is not supported
-* (To be named) Any recommended non-polyfilled recipe above with one slight variation: it uses the eBay method if the CSS Font Loading API is not supported (in practice this means `font-display: optional` only on IE/Edge). This is what I’m currently doing on [zachleat.com](https://www.zachleat.com/web/).
 * FOUT without a class
   * `.style.fontFamily` method (only works well with one family per page), first saw this in a [tweet from @simevidas](https://twitter.com/simevidas/status/829016037366566912)
   * CSS Font Loading API `.add()` method: Doesn’t require any modification of the CSS, injects the web fonts using JS programmatically (the Asynchronous Data URI method below also does this). Documented in the [Webfont Handbook from @bramstein](https://abookapart.com/products/webfont-handbook).
