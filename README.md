@@ -27,7 +27,7 @@ As web fonts are a progressive enhancement and with increasing support for the C
 * [Critical FOFT](./critical-foft.html)
   * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft)
   * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft.html) _(5 web fonts—1 subset)_
-  * or [using a polyfill](./critical-foft-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-polyfill.html) _(4 web fonts)_
+  * or [using a polyfill](./critical-foft-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-polyfill.html) _(5 web fonts—1 subset)_
 * [Critical FOFT with Data URI](critical-foft-data-uri.html)
   * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-data-uri)
   * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-data-uri.html) _(5 web fonts—1 subset inline Data URI)_
@@ -48,7 +48,10 @@ You’ll probably see blog posts on these at some point.
   * Notable in that it lazy loads the font loading polyfill only if the CSS Font Loading API is not supported
 * (To be named) Any recommended non-polyfilled recipe above with one slight variation: it uses the eBay method if the CSS Font Loading API is not supported (in practice this means `font-display: optional` only on IE/Edge). This is what I’m currently doing on [zachleat.com](https://www.zachleat.com/web/).
 * FOUT without a class
-  * Doesn’t require any modification of the CSS, injects the web fonts using JS programmatically (the Asynchronous Data URI method below also does this). Documented in the [Webfont Handbook from @bramstein](https://abookapart.com/products/webfont-handbook).
+  * `.style.fontFamily` method (only works well with one family per page), first saw this in a [tweet from @simevidas](https://twitter.com/simevidas/status/829016037366566912)
+  * CSS Font Loading API `.add()` method: Doesn’t require any modification of the CSS, injects the web fonts using JS programmatically (the Asynchronous Data URI method below also does this). Documented in the [Webfont Handbook from @bramstein](https://abookapart.com/products/webfont-handbook).
+* Metric compatible web fonts
+  * Show how fonts can look without FOUT reflow if they are metric compatible.
 
 ## Not Recommended but included for Posterity
 
