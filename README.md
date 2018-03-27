@@ -8,45 +8,64 @@ Demos are hosted at https://www.zachleat.com/web-fonts/demos/
 
 As web fonts are a progressive enhancement and with increasing support for the CSS Font Loading API, we can look forward to a time in which we won’t need to inline a polyfill into the header (for even faster font loading). The simplified CSS Font Loading API recipes are the defaults, but polyfilled versions are included for broader browser support—notably only the polyfilled versions will show web fonts in Internet Explorer and Edge web browsers (which do not have support for the CSS Font Loading API).
 
-* [`font-display`](./font-display.html)
-  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#font-display)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/font-display.html)** _(4 web fonts)_
-* [`preload`](./preload.html)
-  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#preload)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/preload.html)** _(4 web fonts—1 preloaded)_
-* [FOUT with a Class](./fout-with-class.html)
-  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#fout-class)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/fout-with-class.html) _(4 web fonts)_
-  * or [using a polyfill](./fout-with-class-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/fout-with-class-polyfill.html) _(4 web fonts)_
-* [FOFT](./foft.html)
-  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#foft)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/foft.html) _(5 web fonts, two are the same—but only loaded once)_
-  * or [using a polyfill](./foft-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/foft-polyfill.html) _(4 web fonts)_
-* [FOFT using only `font-display`](./font-display-mix.html)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/font-display-mix.html) _(4 web fonts—1 `swap` / 3 `optional`)_
-* [Critical FOFT](./critical-foft.html)
-  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft.html) _(5 web fonts—1 subset)_
-  * or [using a polyfill](./critical-foft-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-polyfill.html) _(5 web fonts—1 subset)_
-* [Critical FOFT with Data URI](critical-foft-data-uri.html)
-  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-data-uri)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-data-uri.html) _(5 web fonts—1 subset inline Data URI)_
-  * or [using a polyfill](./critical-foft-data-uri-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-data-uri-polyfill.html) _(5 web fonts—1 subset inline Data URI)_
-* [Critical FOFT with `preload`](./critical-foft-preload.html)
-  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-preload)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload.html) _(5 web fonts—1 subset)_
-  * or [using a polyfill](./critical-foft-preload-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload-polyfill.html) _(5 web fonts—1 subset)_
-* [“The Compromise”: Critical FOFT with `preload`, with a polyfill fallback emulating `font-display: optional`](./critical-foft-preload-fallback-optional.html)
-  * _TODO_ Documentation
-    * Builds on the eBay method described in the experiments below.
-  * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload-fallback-optional.html) _(5 web fonts—1 subset)_ (polyfill is lazy loaded when CSS Font Loading API is not supported)
-  * Currently in use on [zachleat.com](https://www.zachleat.com/web/) and [smashingmagazine.com](https://www.smashingmagazine.com/)
+### [`font-display`](./font-display.html)
+
+* [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#font-display)
+* [Demo](https://www.zachleat.com/web-fonts/demos/font-display.html)** _(4 web fonts)_
+
+### [`preload`](./preload.html)
+
+* [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#preload)
+* [Demo](https://www.zachleat.com/web-fonts/demos/preload.html)** _(4 web fonts—1 preloaded)_
+
+### [FOUT with a Class](./fout-with-class.html)
+
+* [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#fout-class)
+* [Demo](https://www.zachleat.com/web-fonts/demos/fout-with-class.html) _(4 web fonts)_
+* or [using a polyfill](./fout-with-class-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/fout-with-class-polyfill.html) _(4 web fonts)_
+
+### [FOFT](./foft.html)
+
+* [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#foft)
+* [Demo](https://www.zachleat.com/web-fonts/demos/foft.html) _(5 web fonts, two are the same—but only loaded once)_
+* or [using a polyfill](./foft-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/foft-polyfill.html) _(4 web fonts)_
+
+### [FOFT using only `font-display`](./font-display-mix.html)
+
+* [Demo](https://www.zachleat.com/web-fonts/demos/font-display-mix.html) _(4 web fonts—1 `swap` / 3 `optional`)_
+
+### [Critical FOFT](./critical-foft.html)
+
+* [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft)
+* [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft.html) _(5 web fonts—1 subset)_
+* or [using a polyfill](./critical-foft-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-polyfill.html) _(5 web fonts—1 subset)_
+
+### [Critical FOFT with Data URI](critical-foft-data-uri.html)
+
+* [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-data-uri)
+* [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-data-uri.html) _(5 web fonts—1 subset inline Data URI)_
+* or [using a polyfill](./critical-foft-data-uri-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-data-uri-polyfill.html) _(5 web fonts—1 subset inline Data URI)_
+
+### [Critical FOFT with `preload`](./critical-foft-preload.html)
+
+* [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-preload)
+* [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload.html) _(5 web fonts—1 subset)_
+* or [using a polyfill](./critical-foft-preload-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload-polyfill.html) _(5 web fonts—1 subset)_
+
+### [“The Compromise”: Critical FOFT with `preload`, with a polyfill fallback emulating `font-display: optional`](./critical-foft-preload-fallback-optional.html)
+
+* _TODO_ Documentation
+  * Builds on the eBay method described in the experiments below.
+* [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload-fallback-optional.html) _(5 web fonts—1 subset)_ (polyfill is lazy loaded when CSS Font Loading API is not supported)
+* Currently in use on [zachleat.com](https://www.zachleat.com/web/) and [smashingmagazine.com](https://www.smashingmagazine.com/)
 
 
 ## Experiments in Progress
 
 You’ll probably see blog posts on these at some point.
 
+* Metric compatible web fonts
+  * Show how fonts can look without FOUT reflow if they are metric compatible.
 * [FOUT metric matching with a Variable Font](./variablefont-fout-test.html)
   * Reduction in FOUT reflow (reduce text movement on web font render)
   * Related: [Font style matcher](https://meowni.ca/font-style-matcher/) from @notwaldorf
@@ -55,8 +74,6 @@ You’ll probably see blog posts on these at some point.
 * FOUT without a class
   * `.style.fontFamily` method (only works well with one family per page), first saw this in a [tweet from @simevidas](https://twitter.com/simevidas/status/829016037366566912)
   * CSS Font Loading API `.add()` method: Doesn’t require any modification of the CSS, injects the web fonts using JS programmatically (the Asynchronous Data URI method below also does this). Documented in the [Webfont Handbook from @bramstein](https://abookapart.com/products/webfont-handbook).
-* Metric compatible web fonts
-  * Show how fonts can look without FOUT reflow if they are metric compatible.
 
 ## Not Recommended but included for Posterity
 
