@@ -122,12 +122,17 @@ You’ll probably see blog posts on these at some point.
 
 ### Failed Experiments
 
+* Asynchronous CSS
+  * This is a common thing people try. Heck, this is what I used to do on [nebraskajs.com](https://nebraskajs.com). Read more at [Lazy Loading Web Fonts is Probably Not What You Want](https://www.zachleat.com/web/lazy-loading-webfonts/)
+  * **Failed**: lazy loading the CSS only delays the start of the FOIT. Does nothing to prevent it.
+  * [Code](./asynchronous-css.html)
+  * [Demo](https://www.zachleat.com/web-fonts/demos/asynchronous-css.html) _(4 web fonts)_
 * `@supports` and `font-display`
-  * [Code](failed-supports.html)
   * Reasons for trying:
     * might be nice to only use web fonts if you can FOUT with `font-display`
     * might be nice to have FOUT with a class if `font-display` not supported (and work well without JS dependencies)
   * **Failed**: `@supports` doesn’t work with font-face descriptors.
+  * [Code](failed-supports.html)
   * [Demo](https://www.zachleat.com/web-fonts/demos/failed-supports.html)
 
 ---
