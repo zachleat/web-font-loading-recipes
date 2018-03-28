@@ -20,6 +20,12 @@ As web fonts are a progressive enhancement and with increasing support for the C
 * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#preload)
 * [Demo](https://www.zachleat.com/web-fonts/demos/preload.html)** _(4 web fonts—1 preloaded)_
 
+### `font-display` and `preload`
+
+* [Code](./font-display-preload.html)
+* _TODO_ Documentation
+* [Demo](https://www.zachleat.com/web-fonts/demos/font-display-preload.html)** _(4 web fonts—1 preloaded)_
+
 ### FOUT with a Class
 
 * [Code](./fout-with-class.html)
