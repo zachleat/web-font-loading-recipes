@@ -11,32 +11,32 @@ As web fonts are a progressive enhancement and with increasing support for the C
 ### `font-display`
 
 * [Code](./font-display.html)
-* [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#font-display)
+* [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#font-display)
 * [Demo](https://www.zachleat.com/web-fonts/demos/font-display.html)** _(4 web fonts)_
 
 ### `preload`
 
 * [Code](./preload.html)
-* [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#preload)
+* [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#preload)
 * [Demo](https://www.zachleat.com/web-fonts/demos/preload.html)** _(4 web fonts—1 preloaded)_
 
 ### `font-display` and `preload`
 
 * [Code](./font-display-preload.html)
-* _TODO_ Documentation
+* Read more about [`font-display`](https://www.zachleat.com/web/comprehensive-webfonts/#font-display) and [`preload`](https://www.zachleat.com/web/comprehensive-webfonts/#preload)
 * [Demo](https://www.zachleat.com/web-fonts/demos/font-display-preload.html)** _(4 web fonts—1 preloaded)_
 
 ### FOUT with a Class
 
 * [Code](./fout-with-class.html)
-* [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#fout-class)
+* [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#fout-class)
 * [Demo](https://www.zachleat.com/web-fonts/demos/fout-with-class.html) _(4 web fonts)_
 * or [using a polyfill](./fout-with-class-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/fout-with-class-polyfill.html) _(4 web fonts)_
 
 ### FOFT
 
 * [Code](./foft.html)
-* [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#foft)
+* [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#foft)
 * [Demo](https://www.zachleat.com/web-fonts/demos/foft.html) _(5 web fonts, two are the same—but only loaded once)_
 * or [using a polyfill](./foft-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/foft-polyfill.html) _(4 web fonts)_
 
@@ -48,28 +48,28 @@ As web fonts are a progressive enhancement and with increasing support for the C
 ### Critical FOFT
 
 * [Code](./critical-foft.html)
-* [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft)
+* [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft)
 * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft.html) _(5 web fonts—1 subset)_
 * or [using a polyfill](./critical-foft-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-polyfill.html) _(5 web fonts—1 subset)_
 
 ### Critical FOFT with Data URI
 
 * [Code](critical-foft-data-uri.html)
-* [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-data-uri)
+* [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-data-uri)
 * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-data-uri.html) _(5 web fonts—1 subset inline Data URI)_
 * or [using a polyfill](./critical-foft-data-uri-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-data-uri-polyfill.html) _(5 web fonts—1 subset inline Data URI)_
 
 ### Critical FOFT with `preload`
 
 * [Code](./critical-foft-preload.html)
-* [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-preload)
+* [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-preload)
 * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload.html) _(5 web fonts—1 subset)_
 * or [using a polyfill](./critical-foft-preload-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload-polyfill.html) _(5 web fonts—1 subset)_
 
 ### “The Compromise”: Critical FOFT with `preload`, with a polyfill fallback emulating `font-display: optional`
 
 * [Code](./critical-foft-preload-fallback-optional.html)
-* _TODO_ Documentation
+* _TODO_ Read more
   * Builds on the eBay method described in the experiments below.
 * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload-fallback-optional.html) _(5 web fonts—1 subset)_ (polyfill is lazy loaded when CSS Font Loading API is not supported)
 * Currently in use on [zachleat.com](https://www.zachleat.com/web/) and [smashingmagazine.com](https://www.smashingmagazine.com/)
@@ -112,28 +112,33 @@ You’ll probably see blog posts on these at some point.
 
 * Inline Data URI
   * [Code](./inline-data-uri.html)
-  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#inline-data-uri)
+  * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#inline-data-uri)
   * [Demo](https://www.zachleat.com/web-fonts/demos/inline-data-uri.html) _(4 web fonts)_
 * Asynchronous Data URI
   * [Code](./async-data-uri.html)
-  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#async-data-uri)
+  * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#async-data-uri)
   * [Demo](https://www.zachleat.com/web-fonts/demos/async-data-uri.html) _(4 web fonts)_
 * Anything that injects a new `<style>` with `@font-face` blocks inside. Really bad repaint cost—seriously, don’t do this.
 
 ### Failed Experiments
 
-* Asynchronous CSS
-  * This is a common thing people try. Heck, this is what I used to do on [nebraskajs.com](https://nebraskajs.com). Read more at [Lazy Loading Web Fonts is Probably Not What You Want](https://www.zachleat.com/web/lazy-loading-webfonts/)
-  * **Failed**: lazy loading the CSS only delays the start of the FOIT. Does nothing to prevent it.
-  * [Code](./asynchronous-css.html)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/asynchronous-css.html) _(4 web fonts)_
-* `@supports` and `font-display`
-  * Reasons for trying:
-    * might be nice to only use web fonts if you can FOUT with `font-display`
-    * might be nice to have FOUT with a class if `font-display` not supported (and work well without JS dependencies)
-  * **Failed**: `@supports` doesn’t work with font-face descriptors.
-  * [Code](failed-supports.html)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/failed-supports.html)
+#### Asynchronous CSS
+
+This is a common thing people try—they asynchronously load the CSS (and only the CSS). Heck, I used this behavior before I started studying web font loading.
+
+* **Failed**: lazy loading the CSS only delays the start of the FOIT. It does not prevent it.
+* [Read more at Lazy Loading Web Fonts is Probably Not What You Want](https://www.zachleat.com/web/lazy-loading-webfonts/)
+* [Code](./asynchronous-css.html) (learn more about [asynchronous CSS](https://github.com/zachleat/async-css-loading))
+* [Demo](https://www.zachleat.com/web-fonts/demos/asynchronous-css.html) _(4 web fonts)_
+
+#### `@supports` and `font-display`
+
+* Reasons for trying:
+  * might be nice to only use web fonts if you can FOUT with `font-display`
+  * might be nice to have FOUT with a class if `font-display` not supported (and work well without JS dependencies)
+* **Failed**: `@supports` doesn’t work with font-face descriptors.
+* [Code](failed-supports.html)
+* [Demo](https://www.zachleat.com/web-fonts/demos/failed-supports.html)
 
 ---
 
