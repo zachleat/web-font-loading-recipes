@@ -90,7 +90,7 @@
 
 		var fontASubset = new FontFaceObserver('LatoSubset');
 
-		Promise.all([fontASubset.load()]).then(function () {
+		Promise.all([fontASubset.load(null, 10000)]).then(function () {
 			document.documentElement.className += " fonts-loaded-1";
 
 			var fontA = new FontFaceObserver('Lato');
@@ -105,7 +105,12 @@
 					style: 'italic'
 				});
 
-			Promise.all([fontA.load(), fontB.load(), fontC.load(), fontD.load()]).then(function () {
+			Promise.all([
+				fontA.load(null, 10000),
+				fontB.load(null, 10000),
+				fontC.load(null, 10000),
+				fontD.load(null, 10000)
+			]).then(function () {
 				document.documentElement.className += " fonts-loaded-2";
 
 				// Optimization for Repeat Views

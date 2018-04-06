@@ -90,7 +90,12 @@
 				style: 'italic'
 			});
 
-		Promise.all([fontA.load(), fontB.load(), fontC.load(), fontD.load()]).then(function () {
+		Promise.all([
+			fontA.load(null, 10000),
+			fontB.load(null, 10000),
+			fontC.load(null, 10000),
+			fontD.load(null, 10000)
+		]).then(function () {
 			document.documentElement.className += " fonts-loaded";
 
 			// Optimization for Repeat Views

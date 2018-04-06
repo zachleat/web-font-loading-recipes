@@ -95,6 +95,8 @@
 
 		var fontASubset = new FontFaceObserver('LatoSubset');
 
+		// We use the default 3 second FontFaceObserver timeout here since the data uri is inlined
+		// unlike the 10 second timeout below.
 		Promise.all([fontASubset.load()]).then(function () {
 			document.documentElement.className += " fonts-stage-1";
 
@@ -110,7 +112,12 @@
 					style: 'italic'
 				});
 
-			Promise.all([fontA.load(), fontB.load(), fontC.load(), fontD.load()]).then(function () {
+			Promise.all([
+				fontA.load(null, 10000),
+				fontB.load(null, 10000),
+				fontC.load(null, 10000),
+				fontD.load(null, 10000)
+			]).then(function () {
 				document.documentElement.className += " fonts-stage-2";
 
 				// Optimization for Repeat Views
