@@ -115,21 +115,21 @@ You’ll probably see blog posts on these at some point.
   * Old browsers [used to render FOIT without a timeout](https://www.zachleat.com/web/fout-foit-history/), which in practice made web fonts a single point of failure. Using WOFF2 only cuts the mustard to modern browsers that have a three second FOIT timeout for web fonts. Three seconds is still way too long for me to implement this in production, but it’s worth noting.
   * [Demo](https://www.zachleat.com/web-fonts/demos/unceremonious-font-face-woff2-only.html)** _(4 web fonts)_
 
-### Deprecated Methods
+### ⚠️ Deprecated Methods
 
-* Inline Data URI
+* ⚠️ Inline Data URI
   * [Code](./inline-data-uri.html)
   * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#inline-data-uri)
   * [Demo](https://www.zachleat.com/web-fonts/demos/inline-data-uri.html) _(4 web fonts)_
-* Asynchronous Data URI
+* ⚠️ Asynchronous Data URI
   * [Code](./async-data-uri.html)
   * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#async-data-uri)
   * [Demo](https://www.zachleat.com/web-fonts/demos/async-data-uri.html) _(4 web fonts)_
-* Anything that injects a new `<style>` with `@font-face` blocks inside. Really bad repaint cost—seriously, don’t do this.
+* ⚠️ Anything that injects a new `<style>` with `@font-face` blocks inside. Really bad repaint cost—seriously, don’t do this.
 
 ### Failed Experiments
 
-#### Asynchronous CSS
+#### 🚫 Asynchronous CSS
 
 This is a common thing people try—they asynchronously load the CSS (and only the CSS). Heck, I used this behavior before I started studying web font loading.
 
@@ -138,7 +138,7 @@ This is a common thing people try—they asynchronously load the CSS (and only t
 * [Code](./asynchronous-css.html) (learn more about [asynchronous CSS](https://github.com/zachleat/async-css-loading))
 * [Demo](https://www.zachleat.com/web-fonts/demos/asynchronous-css.html) _(4 web fonts)_
 
-#### `@supports` and `font-display`
+#### 🚫 `@supports` and `font-display`
 
 * Reasons for trying:
   * might be nice to only use web fonts if you can FOUT with `font-display`
