@@ -69,7 +69,7 @@ As web fonts are a progressive enhancement and with increasing support for the C
 
 ### The eBay Method
 
-* [Code](./ebay-method.html)
+* Code: [HTML](./ebay-method.html) and [Lazy-loaded JavaScript](./ebay-method.js)
 * Emulate `font-display: optional` with JavaScript.
   * Notable that it lazy loads the font loading polyfill only if CSS Font Loading API is not supported
 * Read more at [eBay’s Font Loading Strategy](http://www.ebaytechblog.com/2017/09/21/ebays-font-loading-strategy/).
@@ -77,7 +77,7 @@ As web fonts are a progressive enhancement and with increasing support for the C
 
 ### “The Compromise”: Critical FOFT with `preload`, with a polyfill fallback emulating `font-display: optioFnal`
 
-* [Code](./critical-foft-preload-fallback-optional.html)
+* Code: [HTML](./critical-foft-preload-fallback-optional.html) and [Lazy-loaded JavaScript](./critical-foft-preload-fallback-optional.js)
 * _TODO_ Read more
   * Heavily inspired by and builds on the eBay method.
 * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload-fallback-optional.html) _(5 web fonts—1 subset)_ (polyfill is lazy loaded when CSS Font Loading API is not supported)
