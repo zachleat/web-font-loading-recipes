@@ -28,9 +28,9 @@
 
 	Promise.all([fontA.load(), fontB.load(), fontC.load(), fontD.load()]).then(function() {
 		// Don’t add the class here, we’re emulating font-display: optional (load for next view)
-		// document.documentElement.className += " fonts-loaded-2";
+		// document.documentElement.className += " fonts-loaded";
 
 		// Optimization for Repeat Views
-		sessionStorage.fontsLoadedCriticalFoftPreloadFallback = true;
+		sessionStorage.fontsLoadedEbayMethod = true;
 	});
 })();

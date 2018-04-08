@@ -66,6 +66,13 @@ As web fonts are a progressive enhancement and with increasing support for the C
 * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload.html) _(5 web fonts—1 subset)_
 * or [using a polyfill](./critical-foft-preload-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload-polyfill.html) _(5 web fonts—1 subset)_
 
+### The eBay Method
+
+* Emulate `font-display: optional` with JavaScript.
+* Notable that it lazy loads the font loading polyfill only if CSS Font Loading API is not supported
+* Read more at [eBay’s Font Loading Strategy](http://www.ebaytechblog.com/2017/09/21/ebays-font-loading-strategy/).
+* [Demo](https://www.zachleat.com/web-fonts/demos/ebay-method.html) _(4 web fonts)_ (polyfill is lazy loaded when CSS Font Loading API is not supported)
+
 ### “The Compromise”: Critical FOFT with `preload`, with a polyfill fallback emulating `font-display: optional`
 
 * [Code](./critical-foft-preload-fallback-optional.html)
@@ -84,8 +91,6 @@ You’ll probably see blog posts on these at some point.
 * [FOUT metric matching with a Variable Font](./variablefont-fout-test.html)
   * Reduction in FOUT reflow (reduce text movement on web font render)
   * Related: [Font style matcher](https://meowni.ca/font-style-matcher/) from @notwaldorf
-* Emulate `font-display: optional` with JS (the [eBay method](http://www.ebaytechblog.com/2017/09/21/ebays-font-loading-strategy/))
-  * Notable in that it lazy loads the font loading polyfill only if the CSS Font Loading API is not supported
 * FOUT without a class
   * `.style.fontFamily` method (only works well with one family per page), first saw this in a [tweet from @simevidas](https://twitter.com/simevidas/status/829016037366566912)
   * CSS Font Loading API `.add()` method: Doesn’t require any modification of the CSS, injects the web fonts using JS programmatically (the Asynchronous Data URI method below also does this). Documented in the [Webfont Handbook from @bramstein](https://abookapart.com/products/webfont-handbook).
