@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>The eBay Method: Emulating font-display: optional with JavaScript</title>
-	<link rel="preload" href="font-lato/lato-zachleat-optimized.woff2" as="font" type="font/woff2" crossorigin>
 	<style>
 	@font-face {
 		font-family: Lato;
@@ -47,16 +46,14 @@
 			document.documentElement.className += " fonts-loaded";
 			return;
 		} else if( "fonts" in document ) {
-			document.fonts.load("1em LatoSubset").then(function () {
-				Promise.all([
-					document.fonts.load("400 1em Lato"),
-					document.fonts.load("700 1em Lato"),
-					document.fonts.load("italic 1em Lato"),
-					document.fonts.load("italic 700 1em Lato")
-				]).then(function () {
-					// One difference here from the stock ebay method is that this uses sessionStorage instead of localStorage
-					sessionStorage.fontsLoadedEbayMethod = true;
-				});
+			Promise.all([
+				document.fonts.load("400 1em Lato"),
+				document.fonts.load("700 1em Lato"),
+				document.fonts.load("italic 1em Lato"),
+				document.fonts.load("italic 700 1em Lato")
+			]).then(function () {
+				// One difference here from the stock ebay method is that this uses sessionStorage instead of localStorage
+				sessionStorage.fontsLoadedEbayMethod = true;
 			});
 		} else {
 			// use fallback
