@@ -40,10 +40,11 @@ As web fonts are a progressive enhancement and with increasing support for the C
 * [Demo](https://www.zachleat.com/web-fonts/demos/foft.html) _(5 web fonts, two are the same—but only loaded once)_
 * or [using a polyfill](./foft-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/foft-polyfill.html) _(4 web fonts)_
 
-### FOFT using only `font-display`
+### FOFT using only `font-display` (mix `font-display` values)
 
 * [Code](./font-display-mix.html)
 * [Demo](https://www.zachleat.com/web-fonts/demos/font-display-mix.html) _(4 web fonts—1 `swap` / 3 `optional`)_
+* ⚠️ This method does not currently have cross-browser support. I’m hoping this will change—[learn more](https://twitter.com/zachleat/status/964173100001656832).
 
 ### Critical FOFT
 
@@ -54,7 +55,7 @@ As web fonts are a progressive enhancement and with increasing support for the C
 
 ### Critical FOFT with Data URI
 
-* [Code](critical-foft-data-uri.html)
+* [Code](./critical-foft-data-uri.html)
 * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-data-uri)
 * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-data-uri.html) _(5 web fonts—1 subset inline Data URI)_
 * or [using a polyfill](./critical-foft-data-uri-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-data-uri-polyfill.html) _(5 web fonts—1 subset inline Data URI)_
@@ -68,16 +69,17 @@ As web fonts are a progressive enhancement and with increasing support for the C
 
 ### The eBay Method
 
+* [Code](./ebay-method.html)
 * Emulate `font-display: optional` with JavaScript.
-* Notable that it lazy loads the font loading polyfill only if CSS Font Loading API is not supported
+  * Notable that it lazy loads the font loading polyfill only if CSS Font Loading API is not supported
 * Read more at [eBay’s Font Loading Strategy](http://www.ebaytechblog.com/2017/09/21/ebays-font-loading-strategy/).
 * [Demo](https://www.zachleat.com/web-fonts/demos/ebay-method.html) _(4 web fonts)_ (polyfill is lazy loaded when CSS Font Loading API is not supported)
 
-### “The Compromise”: Critical FOFT with `preload`, with a polyfill fallback emulating `font-display: optional`
+### “The Compromise”: Critical FOFT with `preload`, with a polyfill fallback emulating `font-display: optioFnal`
 
 * [Code](./critical-foft-preload-fallback-optional.html)
 * _TODO_ Read more
-  * Builds on the eBay method described in the experiments below.
+  * Heavily inspired by and builds on the eBay method.
 * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload-fallback-optional.html) _(5 web fonts—1 subset)_ (polyfill is lazy loaded when CSS Font Loading API is not supported)
 * Currently in use on [zachleat.com](https://www.zachleat.com/web/) and [smashingmagazine.com](https://www.smashingmagazine.com/)
 
