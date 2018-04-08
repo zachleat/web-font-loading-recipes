@@ -43,7 +43,7 @@
 		"use strict";
 
 		// Optimization for Repeat Views
-		if( localStorage.fontsLoadedEbayMethod ) {
+		if( sessionStorage.fontsLoadedEbayMethod ) {
 			document.documentElement.className += " fonts-loaded";
 			return;
 		} else if( "fonts" in document ) {
@@ -54,8 +54,8 @@
 					document.fonts.load("italic 1em Lato"),
 					document.fonts.load("italic 700 1em Lato")
 				]).then(function () {
-					// One difference here from the other demos is that it uses localStorage instead of sessionStorage
-					localStorage.fontsLoadedEbayMethod = true;
+					// One difference here from the stock ebay method is that this uses sessionStorage instead of localStorage
+					sessionStorage.fontsLoadedEbayMethod = true;
 				});
 			});
 		} else {
