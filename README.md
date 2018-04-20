@@ -20,7 +20,7 @@ As web fonts are a progressive enhancement and with increasing support for the C
 * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#preload)
 * [Demo](https://www.zachleat.com/web-fonts/demos/preload.html)** _(4 web fonts—1 preloaded)_
 
-### `font-display` and `preload`
+### `font-display: swap` with `preload`
 
 * [Code](./font-display-preload.html)
 * Read more about [`font-display`](https://www.zachleat.com/web/comprehensive-webfonts/#font-display) and [`preload`](https://www.zachleat.com/web/comprehensive-webfonts/#preload)
@@ -130,7 +130,7 @@ You’ll probably see blog posts on these at some point.
   * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#async-data-uri)
   * [Demo](https://www.zachleat.com/web-fonts/demos/async-data-uri.html) _(4 web fonts)_
 * ⚠️ Anything that injects a new `<style>` with `@font-face` blocks inside. Really bad repaint cost—seriously, don’t do this.
-* `preload` with `font-display: optional`
+* ⚠️ `font-display: optional` and `preload`
   * [Code](./font-display-optional-preload.html)
   * [Read more: `preload` with `font-display: optional` is an Anti-pattern](https://www.zachleat.com/web/preload-font-display-optional/)
   * [Demo](https://www.zachleat.com/web-fonts/demos/font-display-optional-preload.html)** _(4 web fonts)_
