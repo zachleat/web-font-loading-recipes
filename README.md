@@ -119,7 +119,7 @@ You’ll probably see blog posts on these at some point.
   * Old browsers [used to render FOIT without a timeout](https://www.zachleat.com/web/fout-foit-history/), which in practice made web fonts a single point of failure. Using WOFF2 only cuts the mustard to modern browsers that have a three second FOIT timeout for web fonts. Three seconds is still way too long for me to implement this in production, but it’s worth noting.
   * [Demo](https://www.zachleat.com/web-fonts/demos/unceremonious-font-face-woff2-only.html)** _(4 web fonts)_
 
-### Deprecated Methods
+### Anti-patterns and Deprecated Methods
 
 * ⚠️ Inline Data URI
   * [Code](./inline-data-uri.html)
