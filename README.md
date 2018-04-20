@@ -8,7 +8,7 @@ Demos are hosted at https://www.zachleat.com/web-fonts/demos/
 
 As web fonts are a progressive enhancement and with increasing support for the CSS Font Loading API, we can look forward to a time in which we won’t need to inline a polyfill into the header (for even faster font loading). The simplified CSS Font Loading API recipes are the defaults, but polyfilled versions are included for broader browser support—notably only the polyfilled versions will show web fonts in Internet Explorer and Edge web browsers (which do not have support for the CSS Font Loading API).
 
-### `font-display`
+### `font-display: swap`
 
 * [Code](./font-display.html)
 * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#font-display)
@@ -99,6 +99,10 @@ You’ll probably see blog posts on these at some point.
 
 ## Not Recommended but included for Posterity
 
+* `font-display: optional`
+  * A little harsh to put this in the Not Recommended section but I like my web fonts on an empty-cache visit 😎
+  * [Code](./font-display-optional.html)
+  * [Demo](https://www.zachleat.com/web-fonts/demos/font-display-optional.html)** _(4 web fonts)_
 * System fonts
   * [Code](./dont.html)
   * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#abstain)
@@ -126,6 +130,10 @@ You’ll probably see blog posts on these at some point.
   * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#async-data-uri)
   * [Demo](https://www.zachleat.com/web-fonts/demos/async-data-uri.html) _(4 web fonts)_
 * ⚠️ Anything that injects a new `<style>` with `@font-face` blocks inside. Really bad repaint cost—seriously, don’t do this.
+* `preload` with `font-display: optional`
+  * [Code](./font-display-optional-preload.html)
+  * [Read more: `preload` with `font-display: optional` is an Anti-pattern](https://www.zachleat.com/web/preload-font-display-optional/)
+  * [Demo](https://www.zachleat.com/web-fonts/demos/font-display-optional-preload.html)** _(4 web fonts)_
 
 ### Failed Experiments
 
