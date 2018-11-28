@@ -33,6 +33,15 @@ As web fonts are a progressive enhancement and with increasing support for the C
 * [Demo](https://www.zachleat.com/web-fonts/demos/fout-with-class.html) _(4 web fonts)_
 * or [using a polyfill](./fout-with-class-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/fout-with-class-polyfill.html) _(4 web fonts)_
 
+### FOUT
+
+Similar to the above, but without using a class—using only the CSS Font Loading API. This doesn’t require any modification of the CSS, injects the web fonts using JS programmatically. Documented in the [Webfont Handbook from @bramstein](https://abookapart.com/products/webfont-handbook).
+
+* [Code](./fout.html)
+* [Demo](https://www.zachleat.com/web-fonts/demos/fout.html) _(4 web fonts)_
+
+* **TODO** Related: `.style.fontFamily` method (only works well with one family per page), first saw this in a [tweet from @simevidas](https://twitter.com/simevidas/status/829016037366566912)
+
 ### FOFT
 
 * [Code](./foft.html)
@@ -93,9 +102,6 @@ You’ll probably see blog posts on these at some point.
 * [FOUT metric matching with a Variable Font](./variablefont-fout-test.html)
   * Reduction in FOUT reflow (reduce text movement on web font render)
   * Related: [Font style matcher](https://meowni.ca/font-style-matcher/) from @notwaldorf
-* FOUT without a class
-  * `.style.fontFamily` method (only works well with one family per page), first saw this in a [tweet from @simevidas](https://twitter.com/simevidas/status/829016037366566912)
-  * CSS Font Loading API `.add()` method: Doesn’t require any modification of the CSS, injects the web fonts using JS programmatically (the Asynchronous Data URI method below also does this). Documented in the [Webfont Handbook from @bramstein](https://abookapart.com/products/webfont-handbook).
 
 ## Not Recommended but included for Posterity
 
