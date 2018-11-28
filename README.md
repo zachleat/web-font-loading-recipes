@@ -35,12 +35,11 @@ As web fonts are a progressive enhancement and with increasing support for the C
 
 ### FOUT
 
-Similar to the above, but without using a class—using only the CSS Font Loading API. This doesn’t require any modification of the CSS, injects the web fonts using JS programmatically. Documented in the [Webfont Handbook from @bramstein](https://abookapart.com/products/webfont-handbook).
+Similar to the above, but without using a class—using only the CSS Font Loading API. This doesn’t require any modification of the CSS, injects the web fonts using JS programmatically. I first saw this method in the [Webfont Handbook from @bramstein](https://abookapart.com/products/webfont-handbook).
 
 * [Code](./fout.html)
 * [Demo](https://www.zachleat.com/web-fonts/demos/fout.html) _(4 web fonts)_
-
-* **TODO** Related: `.style.fontFamily` method (only works well with one family per page), first saw this in a [tweet from @simevidas](https://twitter.com/simevidas/status/829016037366566912)
+* Related: `.style.fontFamily` method (only works well with one family per page), first saw this in a [tweet from @simevidas](https://twitter.com/simevidas/status/829016037366566912)
 
 ### FOFT
 
