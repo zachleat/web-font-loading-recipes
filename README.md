@@ -89,7 +89,23 @@ Two stage load, using one Roman font file in the first stage (with font-synthesi
 
 ## Further Enhancements
 
-### FOUT with the Navigation Information API
+### FOUT with the Network Information API
+
+Opt out of web fonts on slow connection speeds.
+
+* [Code](./network-information-api.html)
+
+### FOUT with `prefers-reduced-motion` User Preference
+
+Opt out of web fonts when user has enabled `Reduce Motion` accessibility preference.
+
+* [Code](./prefers-reduced-motion.html)
+
+### FOUT with `save-data` User Preference
+
+Opt out of web fonts when user has enabled `Data Saver` mode.
+
+* [Code](./save-data.html)
 
 ## Experiments in Progress
 

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FOUT with Save-Data</title>
+	<style>
+	body {
+		font-family: Lato, sans-serif;
+	}
+	
+	</style>
+	<script>
+	(function() {
+		function loadFonts() {
+			if( !("fonts" in document ) ) {
+				return;
+			}
+
+			var fontRoman = new FontFace("Lato", "url('font-lato/lato-regular-webfont.woff2') format('woff2'),url('font-lato/lato-regular-webfont.woff') format('woff')");
+			var fontBold = new FontFace("Lato", "url('font-lato/lato-bold-webfont.woff2') format('woff2'),url('font-lato/lato-bold-webfont.woff') format('woff')", {
+				weight: "700"
+			});
+			var fontItalic = new FontFace("Lato", "url('font-lato/lato-italic-webfont.woff2') format('woff2'),url('font-lato/lato-italic-webfont.woff') format('woff')", {
+				style: "italic"
+			});
+			var fontBoldItalic = new FontFace("Lato", "url('font-lato/lato-bolditalic-webfont.woff2') format('woff2'),url('font-lato/lato-bolditalic-webfont.woff') format('woff')", {
+				weight: "700",
+				style: "italic"
+			});
+
+			Promise.all([
+				fontRoman.load(),
+				fontBold.load(),
+				fontItalic.load(),
+				fontBoldItalic.load()
+			]).then(function(loadedFonts) {
+
+				// Render them at the same time
+				loadedFonts.forEach(function(font) {
+					document.fonts.add(font);
+				});
+			});
+		}
+
+		if( navigator.connection && navigator.connection.saveData ) {
+		} else {
+			loadFonts();
+		}
+	})();
+	</script>
+</head>
+<body>
+	<h1>FOUT with Save-Data</h1>
+	<p>This is a paragraph. <strong>This is heavier text.</strong> <em>This is emphasized text.</em> <strong><em>This is heavier and emphasized text.</em></strong></p>
+
+	<hr style="margin-top: 2em">
+	<ul>
+		<li>This demo is a companion to <a href="https://www.zachleat.com/web/comprehensive-webfonts/">A Comprehensive Guide to Font Loading Strategies</a></li>
+		<li>See all demos on <a href="https://github.com/zachleat/web-font-loading-recipes">GitHub <code>zachleat/web-font-loading-recipes</code></a></li>
+	</ul>
+</body>
+</html>
