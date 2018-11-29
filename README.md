@@ -182,7 +182,7 @@ Anything that uses JavaScript to inject a new `<style>` with `@font-face` blocks
 This method does not currently have cross-browser support. I’m hoping this will change—[learn more](https://twitter.com/zachleat/status/964173100001656832).
 
 * [Code](./font-display-mix.html)
-* [Demo](https://www.zachleat.com/web-fonts/demos/font-display-mix.html) _(4 web fonts—1 `swap` / 3 `optional`)_
+* [Demo](https://www.zachleat.com/web-fonts/demos/font-display-mix.html)** _(4 web fonts—1 `swap` / 3 `optional`)_
 
 ## Failed Experiments
 
