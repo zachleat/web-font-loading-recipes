@@ -89,6 +89,8 @@ Two stage load, using one Roman font file in the first stage (with font-synthesi
 
 ## Further Enhancements
 
+These aren’t necessarily font loading strategies on their own but they are extra enhancements you can layer on top of and pair with existing strategies.
+
 ### Network Information API
 
 Opt out of web fonts on slow connection speeds.
