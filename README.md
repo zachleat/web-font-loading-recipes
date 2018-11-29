@@ -43,16 +43,12 @@ Similar to the above, but without using a class—using only the CSS Font Loadin
 
 ### FOFT
 
+Two stage load, using one Roman font file in the first stage (with font-synthesis).
+
 * [Code](./foft.html)
 * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#foft)
 * [Demo](https://www.zachleat.com/web-fonts/demos/foft.html) _(5 web fonts, two are the same—but only loaded once)_
 * or [using a polyfill](./foft-polyfill.html)—[Demo](https://www.zachleat.com/web-fonts/demos/foft-polyfill.html) _(4 web fonts)_
-
-### FOFT using only `font-display` (mix `font-display` values)
-
-* [Code](./font-display-mix.html)
-* [Demo](https://www.zachleat.com/web-fonts/demos/font-display-mix.html) _(4 web fonts—1 `swap` / 3 `optional`)_
-* ⚠️ This method does not currently have cross-browser support. I’m hoping this will change—[learn more](https://twitter.com/zachleat/status/964173100001656832).
 
 ### Critical FOFT
 
@@ -91,6 +87,9 @@ Similar to the above, but without using a class—using only the CSS Font Loadin
 * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload-fallback-optional.html) _(5 web fonts—1 subset)_ (polyfill is lazy loaded when CSS Font Loading API is not supported)
 * Currently in use on [zachleat.com](https://www.zachleat.com/web/) and [smashingmagazine.com](https://www.smashingmagazine.com/)
 
+## Further Enhancements
+
+### FOUT with the Navigation Information API
 
 ## Experiments in Progress
 
@@ -104,45 +103,74 @@ You’ll probably see blog posts on these at some point.
 
 ## Not Recommended but included for Posterity
 
-* `font-display: optional`
-  * A little harsh to put this in the Not Recommended section but I like my web fonts on an empty-cache visit 😎
-  * [Code](./font-display-optional.html)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/font-display-optional.html)** _(4 web fonts)_
-* System fonts
-  * [Code](./dont.html)
-  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#abstain)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/dont.html) _(0 web fonts)_
-* Unceremonious Web Fonts
-  * [Code](./unceremonious-font-face.html)
-  * [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#font-face)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/unceremonious-font-face.html)** _(4 web fonts)_
-* Unceremonious Faux Web Fonts
-  * [Code](./unceremonious-faux-font-face.html)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/unceremonious-faux-font-face.html)** _(1 web font)_: Bold and italic variants are rendered using [font-synthesis](https://www.zachleat.com/web/webfont-glossary/#font-synthesis)
-* Unceremonious Web Fonts, WOFF2 Only (Cutting the Mustard)
-  * [Code](./unceremonious-font-face-woff2-only.html)
-  * Old browsers [used to render FOIT without a timeout](https://www.zachleat.com/web/fout-foit-history/), which in practice made web fonts a single point of failure. Using WOFF2 only cuts the mustard to modern browsers that have a three second FOIT timeout for web fonts. Three seconds is still way too long for me to implement this in production, but it’s worth noting.
-  * [Demo](https://www.zachleat.com/web-fonts/demos/unceremonious-font-face-woff2-only.html)** _(4 web fonts)_
+### `font-display: optional`
 
-### Anti-patterns and Deprecated Methods
+* A little harsh to put this in the Not Recommended section but I like my web fonts on an empty-cache visit 😎
+* [Code](./font-display-optional.html)
+* [Demo](https://www.zachleat.com/web-fonts/demos/font-display-optional.html)** _(4 web fonts)_
 
-* ⚠️ Inline Data URI
-  * [Code](./inline-data-uri.html)
-  * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#inline-data-uri)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/inline-data-uri.html) _(4 web fonts)_
-* ⚠️ Asynchronous Data URI
-  * [Code](./async-data-uri.html)
-  * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#async-data-uri)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/async-data-uri.html) _(4 web fonts)_
-* ⚠️ Anything that injects a new `<style>` with `@font-face` blocks inside. Really bad repaint cost—seriously, don’t do this.
-* ⚠️ `font-display: optional` and `preload`
-  * [Code](./font-display-optional-preload.html)
-  * [Read more: `preload` with `font-display: optional` is an Anti-pattern](https://www.zachleat.com/web/preload-font-display-optional/)
-  * [Demo](https://www.zachleat.com/web-fonts/demos/font-display-optional-preload.html)** _(4 web fonts)_
+### System fonts
 
-### Failed Experiments
+C’mon. 😇
 
-#### 🚫 Asynchronous CSS
+* [Code](./dont.html)
+* [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#abstain)
+* [Demo](https://www.zachleat.com/web-fonts/demos/dont.html) _(0 web fonts)_
+
+### Unceremonious Web Fonts
+
+* [Code](./unceremonious-font-face.html)
+* [Documentation](https://www.zachleat.com/web/comprehensive-webfonts/#font-face)
+* [Demo](https://www.zachleat.com/web-fonts/demos/unceremonious-font-face.html)** _(4 web fonts)_
+
+### Unceremonious Web Fonts, WOFF2 Only (Cutting the Mustard)
+
+Old browsers [used to render FOIT without a timeout](https://www.zachleat.com/web/fout-foit-history/), which in practice made web fonts a single point of failure. Using WOFF2 only cuts the mustard to modern browsers that have a three second FOIT timeout for web fonts. We’re anti-invisible text here, but this approach is worth mentioning.
+
+* [Code](./unceremonious-font-face-woff2-only.html)
+* [Demo](https://www.zachleat.com/web-fonts/demos/unceremonious-font-face-woff2-only.html)** _(4 web fonts)_
+
+### Unceremonious Faux Web Fonts
+
+`font-synthesis` is not a good end-product.
+
+* [Code](./unceremonious-faux-font-face.html)
+* [Demo](https://www.zachleat.com/web-fonts/demos/unceremonious-faux-font-face.html)** _(1 web font)_: Bold and italic variants are rendered using [font-synthesis](https://www.zachleat.com/web/webfont-glossary/#font-synthesis)
+
+## Anti-patterns and Deprecated Methods
+
+### ⚠️ Inline Data URI
+
+* [Code](./inline-data-uri.html)
+* [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#inline-data-uri)
+* [Demo](https://www.zachleat.com/web-fonts/demos/inline-data-uri.html) _(4 web fonts)_
+
+### ⚠️ Asynchronous Data URI
+
+* [Code](./async-data-uri.html)
+* [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#async-data-uri)
+* [Demo](https://www.zachleat.com/web-fonts/demos/async-data-uri.html) _(4 web fonts)_
+
+### ⚠️ `<style>` Injection
+
+Anything that uses JavaScript to inject a new `<style>` with `@font-face` blocks inside. Really bad repaint cost—avoid this. This is used in the Asynchronous Data URI method above but is also common in worse-performing methods too.
+
+### ⚠️ `font-display: optional` and `preload`
+
+* [Code](./font-display-optional-preload.html)
+* [Read more: `preload` with `font-display: optional` is an Anti-pattern](https://www.zachleat.com/web/preload-font-display-optional/)
+* [Demo](https://www.zachleat.com/web-fonts/demos/font-display-optional-preload.html)** _(4 web fonts)_
+
+### ⚠️ FOFT using only `font-display` (mixing `font-display` values across a `font-family`)
+
+This method does not currently have cross-browser support. I’m hoping this will change—[learn more](https://twitter.com/zachleat/status/964173100001656832).
+
+* [Code](./font-display-mix.html)
+* [Demo](https://www.zachleat.com/web-fonts/demos/font-display-mix.html) _(4 web fonts—1 `swap` / 3 `optional`)_
+
+## Failed Experiments
+
+### 🚫 Asynchronous CSS
 
 This is a common thing people try—they asynchronously load the CSS (and only the CSS). Heck, I used this behavior before I started studying web font loading.
 
@@ -151,7 +179,7 @@ This is a common thing people try—they asynchronously load the CSS (and only t
 * [Code](./asynchronous-css.html) (learn more about [asynchronous CSS](https://github.com/zachleat/async-css-loading))
 * [Demo](https://www.zachleat.com/web-fonts/demos/asynchronous-css.html) _(4 web fonts)_
 
-#### 🚫 `@supports` and `font-display`
+### 🚫 `@supports` and `font-display`
 
 * Reasons for trying:
   * might be nice to only use web fonts if you can FOUT with `font-display`
