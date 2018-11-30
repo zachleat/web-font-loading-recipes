@@ -4,6 +4,15 @@ A bunch of demos for different web font loading strategies. Some of these are in
 
 Demos are hosted at https://www.zachleat.com/web-fonts/demos/
 
+## Table of Contents
+
+* [Recommended Methods](#recommended-methods)
+* [Further Enhancements](#further-enhancements)
+* [Experiments in Progress](#experiments-in-progress)
+* [Not Recommended but included for Posterity](#not-recommended-but-included-for-posterity)
+* [Anti-patterns and Deprecated Methods](#anti-patterns-and-deprecated-methods)
+* [Failed Experiments](#failed-experiments)
+
 ## Recommended Methods
 
 As web fonts are a progressive enhancement and with increasing support for the CSS Font Loading API, we can look forward to a time in which we won’t need to inline a polyfill into the header (for even faster font loading). The simplified CSS Font Loading API recipes are the defaults, but polyfilled versions are included for broader browser support—notably only the polyfilled versions will show web fonts in Internet Explorer and Edge web browsers (which do not have support for the CSS Font Loading API).
