@@ -10,24 +10,28 @@ As web fonts are a progressive enhancement and with increasing support for the C
 
 ### `font-display: swap`
 
+* _CSS_: `@font-face` descriptor
 * [Code](./font-display.html)
 * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#font-display)
 * [Demo](https://www.zachleat.com/web-fonts/demos/font-display.html)** _(4 web fonts)_
 
 ### `preload`
 
+* _HTML_: `<link>` tag
 * [Code](./preload.html)
 * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#preload)
 * [Demo](https://www.zachleat.com/web-fonts/demos/preload.html)** _(4 web fonts—1 preloaded)_
 
 ### `font-display: swap` with `preload`
 
+* _HTML_: `<link>` tag and _CSS_: `@font-face` descriptor
 * [Code](./font-display-preload.html)
 * Read more about [`font-display`](https://www.zachleat.com/web/comprehensive-webfonts/#font-display) and [`preload`](https://www.zachleat.com/web/comprehensive-webfonts/#preload)
 * [Demo](https://www.zachleat.com/web-fonts/demos/font-display-preload.html)** _(4 web fonts—1 preloaded)_
 
 ### FOUT with a Class
 
+* _JavaScript_: CSS Font Loading API
 * [Code](./fout-with-class.html)
 * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#fout-class)
 * [Demo](https://www.zachleat.com/web-fonts/demos/fout-with-class.html) _(4 web fonts)_
@@ -37,6 +41,7 @@ As web fonts are a progressive enhancement and with increasing support for the C
 
 Similar to the above, but without using a class—using only the CSS Font Loading API. This doesn’t require any modification of the CSS, injects the web fonts using JS programmatically. I first saw this method in the [Webfont Handbook from @bramstein](https://abookapart.com/products/webfont-handbook).
 
+* _JavaScript_: CSS Font Loading API
 * [Code](./fout.html)
 * [Demo](https://www.zachleat.com/web-fonts/demos/fout.html) _(4 web fonts)_
 * Related: `.style.fontFamily` method (only works well with one family per page), first saw this in a [tweet from @simevidas](https://twitter.com/simevidas/status/829016037366566912)
@@ -45,6 +50,7 @@ Similar to the above, but without using a class—using only the CSS Font Loadin
 
 Two stage load, using one Roman font file in the first stage (with font-synthesis).
 
+* _JavaScript_: CSS Font Loading API
 * [Code](./foft.html)
 * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#foft)
 * [Demo](https://www.zachleat.com/web-fonts/demos/foft.html) _(5 web fonts, two are the same—but only loaded once)_
@@ -52,6 +58,7 @@ Two stage load, using one Roman font file in the first stage (with font-synthesi
 
 ### Critical FOFT
 
+* _JavaScript_: CSS Font Loading API
 * [Code](./critical-foft.html)
 * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft)
 * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft.html) _(5 web fonts—1 subset)_
@@ -59,6 +66,7 @@ Two stage load, using one Roman font file in the first stage (with font-synthesi
 
 ### Critical FOFT with Data URI
 
+* _JavaScript_: CSS Font Loading API
 * [Code](./critical-foft-data-uri.html)
 * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-data-uri)
 * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-data-uri.html) _(5 web fonts—1 subset inline Data URI)_
@@ -66,6 +74,7 @@ Two stage load, using one Roman font file in the first stage (with font-synthesi
 
 ### Critical FOFT with `preload`
 
+* _HTML_: `<link>` tag and _JavaScript_: CSS Font Loading API
 * [Code](./critical-foft-preload.html)
 * [Read more](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-preload)
 * [Demo](https://www.zachleat.com/web-fonts/demos/critical-foft-preload.html) _(5 web fonts—1 subset)_
@@ -73,6 +82,7 @@ Two stage load, using one Roman font file in the first stage (with font-synthesi
 
 ### The eBay Method
 
+* _JavaScript_: CSS Font Loading API and [FontFaceObserver polyfill](https://github.com/bramstein/fontfaceobserver)
 * Code: [HTML](./ebay-method.html) and [Lazy-loaded JavaScript](./ebay-method.js)
 * Emulate `font-display: optional` with JavaScript.
   * Notable that it lazy loads the font loading polyfill only if CSS Font Loading API is not supported
@@ -81,6 +91,7 @@ Two stage load, using one Roman font file in the first stage (with font-synthesi
 
 ### “The Compromise”: Critical FOFT with `preload`, with a polyfill fallback emulating `font-display: optional`
 
+* _HTML_: `<link>` tag and _JavaScript_: CSS Font Loading API and [FontFaceObserver polyfill](https://github.com/bramstein/fontfaceobserver)
 * Code: [HTML](./critical-foft-preload-fallback-optional.html) and [Lazy-loaded JavaScript](./critical-foft-preload-fallback-optional.js)
 * [Read more](https://www.zachleat.com/web/the-compromise/)
   * Inspired by the eBay method above.
@@ -95,19 +106,19 @@ These aren’t necessarily font loading strategies on their own but they are ext
 
 Opt out of web fonts on slow connection speeds.
 
-* [Code (with FOUT approach)](./network-information-api.html)
+* [Code](./network-information-api.html) (shown with FOUT approach)
 
 ### `prefers-reduced-motion` User Preference
 
 Opt out of web fonts when user has enabled `Reduce Motion` accessibility preference.
 
-* [Code (with FOUT approach)](./prefers-reduced-motion.html)
+* [Code](./prefers-reduced-motion.html) (shown with FOUT approach)
 
 ### `save-data` User Preference
 
 Opt out of web fonts when user has enabled `Data Saver` mode.
 
-* [Code (with FOUT approach)](./save-data.html)
+* [Code](./save-data.html) (shown with FOUT approach)
 
 ## Experiments in Progress
 
