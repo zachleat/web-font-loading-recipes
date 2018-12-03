@@ -113,24 +113,27 @@ These aren’t necessarily font loading strategies on their own but they are ext
 
 ### Network Information API
 
-Opt out of web fonts on slow connection speeds. From [Should I Use JavaScript to Load My Web Fonts?](https://www.filamentgroup.com/lab/js-web-fonts.html)
+Opt out of web fonts on slow connection speeds.
 
 * [Code](./network-information-api.html) (shown with FOUT approach)
 * [Demo](https://www.zachleat.com/web-fonts/demos/network-information-api.html)
+* Related blog post: [Should I Use JavaScript to Load My Web Fonts?](https://www.filamentgroup.com/lab/js-web-fonts.html)
 
 ### `prefers-reduced-motion` User Preference
 
-Opt out of web fonts when user has enabled `Reduce Motion` accessibility preference. From [Should I Use JavaScript to Load My Web Fonts?](https://www.filamentgroup.com/lab/js-web-fonts.html)
+Opt out of web fonts when user has enabled `Reduce Motion` accessibility preference.
 
 * [Code](./prefers-reduced-motion.html) (shown with FOUT approach)
 * [Demo](https://www.zachleat.com/web-fonts/demos/prefers-reduced-motion.html)
+* Related blog post: [Should I Use JavaScript to Load My Web Fonts?](https://www.filamentgroup.com/lab/js-web-fonts.html)
 
 ### `save-data` User Preference
 
-Opt out of web fonts when user has enabled `Data Saver` mode. From [Should I Use JavaScript to Load My Web Fonts?](https://www.filamentgroup.com/lab/js-web-fonts.html)
+Opt out of web fonts when user has enabled `Data Saver` mode.
 
 * [Code](./save-data.html) (shown with FOUT approach)
 * [Demo](https://www.zachleat.com/web-fonts/demos/save-data.html)
+* Related blog post: [Should I Use JavaScript to Load My Web Fonts?](https://www.filamentgroup.com/lab/js-web-fonts.html)
 
 ## Experiments in Progress
 
@@ -228,6 +231,15 @@ This is a common thing people try—they asynchronously load the CSS (and only t
 * **Failed**: `@supports` doesn’t work with font-face descriptors.
 * [Code](failed-supports.html)
 * [Demo](https://www.zachleat.com/web-fonts/demos/failed-supports.html)
+
+### 🚫 `font-family` Stack
+
+* Put two or more `font-family` web fonts in a single `font-family` stack.
+* **Failed**: The font matching algorithm selects the first web font that matches and attempts to load it (ignoring subsequent web font families). Even if you `preload` the subset first stage, it’ll swap over due to `font-family` order priority.
+* [Code](font-family-stack.html)
+* [Demo](https://www.zachleat.com/web-fonts/demos/font-family-stack.html)
+
+* **Update**: While you can mitigate the above problem with `font-display`, perhaps modifying the order of the `font-family` stack and `@font-face` block ordering, there are still problems with removing the unnecessary subset web font from the page after the larger version has loaded. Font features that occur with glyphs that cross these font file boundaries will be broken (kerning, ligatures, et cetera). Relatedly, you cannot remove a CSS-paired `FontFace` object using the CSS Font Loading API (per the specification).
 
 ---
 
