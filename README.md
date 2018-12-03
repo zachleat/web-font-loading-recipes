@@ -113,21 +113,24 @@ These aren’t necessarily font loading strategies on their own but they are ext
 
 ### Network Information API
 
-Opt out of web fonts on slow connection speeds.
+Opt out of web fonts on slow connection speeds. From [Should I Use JavaScript to Load My Web Fonts?](https://www.filamentgroup.com/lab/js-web-fonts.html)
 
 * [Code](./network-information-api.html) (shown with FOUT approach)
+* [Demo](https://www.zachleat.com/web-fonts/demos/network-information-api.html)
 
 ### `prefers-reduced-motion` User Preference
 
-Opt out of web fonts when user has enabled `Reduce Motion` accessibility preference.
+Opt out of web fonts when user has enabled `Reduce Motion` accessibility preference. From [Should I Use JavaScript to Load My Web Fonts?](https://www.filamentgroup.com/lab/js-web-fonts.html)
 
 * [Code](./prefers-reduced-motion.html) (shown with FOUT approach)
+* [Demo](https://www.zachleat.com/web-fonts/demos/prefers-reduced-motion.html)
 
 ### `save-data` User Preference
 
-Opt out of web fonts when user has enabled `Data Saver` mode.
+Opt out of web fonts when user has enabled `Data Saver` mode. From [Should I Use JavaScript to Load My Web Fonts?](https://www.filamentgroup.com/lab/js-web-fonts.html)
 
 * [Code](./save-data.html) (shown with FOUT approach)
+* [Demo](https://www.zachleat.com/web-fonts/demos/save-data.html)
 
 ## Experiments in Progress
 
