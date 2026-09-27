@@ -41,16 +41,27 @@
 	(function() {
 		"use strict";
 
+		// Rejects if no matching @font-face exists (load() resolves with an empty array in that case)
+		function loadFonts( fonts ) {
+			return Promise.all( fonts.map(function( font ) {
+				return document.fonts.load( font ).then(function( faces ) {
+					if( !faces.length ) {
+						throw new Error( "No @font-face found for " + font );
+					}
+				});
+			}));
+		}
+
 		// Optimization for Repeat Views
 		if( sessionStorage.fontsLoadedEbayMethod ) {
 			document.documentElement.className += " fonts-loaded";
 			return;
 		} else if( "fonts" in document ) {
-			Promise.all([
-				document.fonts.load("400 1em Lato"),
-				document.fonts.load("700 1em Lato"),
-				document.fonts.load("italic 1em Lato"),
-				document.fonts.load("italic 700 1em Lato")
+			loadFonts([
+				"400 1em Lato",
+				"700 1em Lato",
+				"italic 1em Lato",
+				"italic 700 1em Lato"
 			]).then(function () {
 				// One difference here from the stock ebay method is that this uses sessionStorage instead of localStorage
 				sessionStorage.fontsLoadedEbayMethod = true;

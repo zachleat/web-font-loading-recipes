@@ -51,6 +51,17 @@
 	</style>
 	<script>
 	(function() {
+		// Rejects if no matching @font-face exists (load() resolves with an empty array in that case)
+		function loadFonts( fonts ) {
+			return Promise.all( fonts.map(function( font ) {
+				return document.fonts.load( font ).then(function( faces ) {
+					if( !faces.length ) {
+						throw new Error( "No @font-face found for " + font );
+					}
+				});
+			}));
+		}
+
 		if( "fonts" in document ) {
 			// Optimization for Repeat Views
 			if( sessionStorage.fontsLoadedCriticalFoft ) {
@@ -59,20 +70,20 @@
 				return;
 			}
 
-			document.fonts.load("1em LatoSubset").then(function () {
+			loadFonts([ "1em LatoSubset" ]).then(function () {
 				document.documentElement.className += " fonts-loaded-1";
 
-				Promise.all([
-					document.fonts.load("400 1em Lato"),
-					document.fonts.load("700 1em Lato"),
-					document.fonts.load("italic 1em Lato"),
-					document.fonts.load("italic 700 1em Lato")
-				]).then(function () {
-					document.documentElement.className += " fonts-loaded-2";
+				return loadFonts([
+					"400 1em Lato",
+					"700 1em Lato",
+					"italic 1em Lato",
+					"italic 700 1em Lato"
+				]);
+			}).then(function () {
+				document.documentElement.className += " fonts-loaded-2";
 
-					// Optimization for Repeat Views
-					sessionStorage.fontsLoadedCriticalFoft = true;
-				});
+				// Optimization for Repeat Views
+				sessionStorage.fontsLoadedCriticalFoft = true;
 			});
 		}
 	})();
